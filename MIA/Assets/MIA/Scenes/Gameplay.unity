@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 201956338}
   - component: {fileID: 201956339}
   m_Layer: 0
-  m_Name: DR
+  m_Name: DL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 485959050}
   - component: {fileID: 485959049}
   m_Layer: 0
-  m_Name: UR
+  m_Name: DL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 680513273}
   - component: {fileID: 680513272}
   m_Layer: 0
-  m_Name: DL
+  m_Name: UR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1668,7 +1668,7 @@ GameObject:
   - component: {fileID: 1070167867}
   - component: {fileID: 1070167868}
   m_Layer: 0
-  m_Name: UR
+  m_Name: DR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1756,7 +1756,7 @@ Transform:
   m_GameObject: {fileID: 1100568989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -28.41, y: 0.17, z: -1.17}
+  m_LocalPosition: {x: -29.55, y: 0.17, z: 6.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1807,14 +1807,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da7bfc9879eeba428da5e714bcf4cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontRight: {fileID: 485959048}
-  frontLeft: {fileID: 1579484578}
-  rearRight: {fileID: 1544229611}
-  rearLeft: {fileID: 680513271}
-  frontRightCollider: {fileID: 1070167868}
-  frontLeftCollider: {fileID: 1700405972}
-  rearRightCollider: {fileID: 201956339}
-  rearLeftCollider: {fileID: 1306958605}
+  frontRight: {fileID: 680513271}
+  frontLeft: {fileID: 1544229611}
+  rearRight: {fileID: 1579484578}
+  rearLeft: {fileID: 485959048}
+  frontRightCollider: {fileID: 1700405972}
+  frontLeftCollider: {fileID: 1306958605}
+  rearRightCollider: {fileID: 1070167868}
+  rearLeftCollider: {fileID: 201956339}
   nextCheckpoint: {fileID: 2044819564}
   checks:
   - {fileID: 888648199}
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 1306958604}
   - component: {fileID: 1306958605}
   m_Layer: 0
-  m_Name: DL
+  m_Name: UL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 1544229613}
   - component: {fileID: 1544229612}
   m_Layer: 0
-  m_Name: DR
+  m_Name: UL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,7 +2653,7 @@ GameObject:
   - component: {fileID: 1579484580}
   - component: {fileID: 1579484579}
   m_Layer: 0
-  m_Name: UL
+  m_Name: DR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2906,7 +2906,7 @@ GameObject:
   - component: {fileID: 1700405971}
   - component: {fileID: 1700405972}
   m_Layer: 0
-  m_Name: UL
+  m_Name: UR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
