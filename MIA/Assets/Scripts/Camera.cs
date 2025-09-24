@@ -1,8 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class Camera : MonoBehaviour
 {
+
+    public Throwable _camera;
     public int pointOfReference = 0;
     private Coroutine checkingCoroutine;
 
@@ -31,7 +35,7 @@ public class Camera : MonoBehaviour
     {
         while (true)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (SteamVR_Action)
             {
                 Debug.Log("Кнопка нажата");
 
