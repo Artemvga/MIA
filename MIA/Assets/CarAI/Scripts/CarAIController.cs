@@ -104,7 +104,7 @@ public class CarAIController : MonoBehaviour
             if(deleteCar)
             {
                 UnityEngine.Debug.Log("Car " + gameObject.name + " destroyed for flipping over.");
-                Destroy(gameObject);
+                //Destroy(gameObject);//
             }
         }
 
@@ -133,6 +133,7 @@ public class CarAIController : MonoBehaviour
         collider.GetWorldPose(out pos, out rot);
         transform.position = pos;
         transform.rotation = rot;
+        //UnityEngine.Debug.Log(rot);
     }
 
     /// <summary>

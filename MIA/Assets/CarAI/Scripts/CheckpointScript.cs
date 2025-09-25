@@ -23,12 +23,6 @@ public class CheckpointScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         CarAIController controller = other.GetComponent<CarAIController>();
@@ -61,6 +55,10 @@ public class CheckpointScript : MonoBehaviour
                 if (nextCheckpoints.Count > 0)
                 {
                     controller.nextCheckpoint = nextCheckpoints[index];
+                }
+                else
+                {
+                    Destroy(controller.gameObject);
                 }
             }
 

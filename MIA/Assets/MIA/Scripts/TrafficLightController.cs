@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TrafficLightController : MonoBehaviour
 {
-    [SerializeField] private bool _hasTimeBefore;
+    [SerializeField] private bool _enableOnStart;
     [SerializeField] private int _timeBetweenChanging;
     [SerializeField] private List<Material> _lightsMaterials;
     [SerializeField] private MeshRenderer _lightMeshRenderer;
@@ -19,29 +19,31 @@ public class TrafficLightController : MonoBehaviour
 
     private IEnumerator ManageTrafficLight()
     {
-        if (_hasTimeBefore)
+        if (_enableOnStart)
         {
             _lightMeshRenderer.material = _lightsMaterials[2];
             _pedestrianCrossing.SetActive(true);
             UpdateSurfaces();
-            yield return new WaitForSeconds(_timeBetweenChanging - 1);
+            yield return new WaitForSeconds(_timeBetweenChanging - 2);
             _lightMeshRenderer.material = _lightsMaterials[1];
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
         }
+        _pedestrianCrossing.SetActive(false);
+        UpdateSurfaces();
         while (true)
         {
-            _pedestrianCrossing.SetActive(false);
-            UpdateSurfaces();
             _lightMeshRenderer.material = _lightsMaterials[0];
-            yield return new WaitForSeconds(_timeBetweenChanging - 1);
+            yield return new WaitForSeconds(_timeBetweenChanging - 2);
             _lightMeshRenderer.material = _lightsMaterials[1];
-            yield return new WaitForSeconds(1);
-            _lightMeshRenderer.material = _lightsMaterials[2];
             _pedestrianCrossing.SetActive(true);
             UpdateSurfaces();
-            yield return new WaitForSeconds(_timeBetweenChanging - 1);
+            yield return new WaitForSeconds(2);
+            _lightMeshRenderer.material = _lightsMaterials[2];
+            yield return new WaitForSeconds(_timeBetweenChanging - 2);
             _lightMeshRenderer.material = _lightsMaterials[1];
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
+            _pedestrianCrossing.SetActive(false);
+            UpdateSurfaces();
         }
     }
 
