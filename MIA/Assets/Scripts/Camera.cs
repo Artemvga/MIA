@@ -9,6 +9,7 @@ public class Camera : MonoBehaviour
     public Throwable _camera;
     public int pointOfReference = 0;
     private Coroutine checkingCoroutine;
+    private bool _isHanded;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,11 +32,27 @@ public class Camera : MonoBehaviour
         }
     }
 
+    private SteamVR_Action_Boolean action = SteamVR_Input.actionsBoolean[0];
+    private void OnEnable()
+    {
+        foreach (var el in SteamVR_Input.actionsBoolean)
+        {
+            if (el.GetShortName() == "TryTakePhoto")
+            {
+                action = el;
+                break;
+            }
+        }
+    }
+
+    public void SetIsHanded(bool isHanded) => _isHanded = isHanded;
+
     private IEnumerator Checking()
     {
+
         while (true)
         {
-            if (SteamVR_Action)
+            if (_isHanded && action.GetStateDown(SteamVR_Input_Sources.Any))
             {
                 Debug.Log("Кнопка нажата");
 
