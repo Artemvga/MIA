@@ -113,6 +113,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean SetRoulettePoint
+        {
+            get
+            {
+                return SteamVR_Actions.default_SetRoulettePoint;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

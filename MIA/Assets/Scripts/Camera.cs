@@ -6,7 +6,6 @@ using Valve.VR.InteractionSystem;
 public class Camera : MonoBehaviour
 {
 
-    public Throwable _camera;
     public int pointOfReference = 0;
     private Coroutine checkingCoroutine;
     private bool _isHanded;
