@@ -8,6 +8,8 @@ public class Roulette : MonoBehaviour
     public LineRenderer line;
     public GameObject firstPoint;
     public GameObject secondPoint;
+    [Space] 
+    public bool useYToRoullete;
 
     private SteamVR_Action_Boolean action = SteamVR_Input.actionsBoolean[0];
     private void OnEnable()
@@ -24,20 +26,44 @@ public class Roulette : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        var v1 = line.GetPosition(0);
-        var v2 = line.GetPosition(1);
-        Debug.Log(Mathf.Sqrt((v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y)));
-        line.SetPosition(0, firstPoint.transform.position);
-        line.SetPosition(1, secondPoint.transform.position);
-    }
-
+    private bool _isPlacedFirst;
+    private bool _isPlacedSecond;
     public void Checking()
     {
         if (action.GetStateDown(SteamVR_Input_Sources.Any))
         {
-            Debug.Log("nice");
+            if (!_isPlacedFirst)
+            {
+                firstPoint.transform.position = gameObject.transform.position;
+                _isPlacedFirst = true;
+            }
+            else if (!_isPlacedSecond)
+            {
+                secondPoint.transform.position = gameObject.transform.position;
+                _isPlacedSecond = true;
+                line.SetPosition(0, firstPoint.transform.position);
+                line.SetPosition(1, secondPoint.transform.position);
+                
+                var v1 = line.GetPosition(0);
+                var v2 = line.GetPosition(1);
+                if (!useYToRoullete)
+                {
+                    Debug.Log(Mathf.Sqrt(Mathf.Pow((v1.x - v2.x), 2) + Mathf.Pow((v1.z - v2.z), 2)));
+                }
+                else
+                {
+                    Debug.Log(Vector3.Distance(v1, v2));
+                }
+            }
+            else
+            {
+                _isPlacedFirst = false;
+                _isPlacedSecond = false;
+                firstPoint.transform.position = new Vector3(0f, -10f, 0f);
+                secondPoint.transform.position = new Vector3(0f, -10f, 0f);
+                line.SetPosition(0, firstPoint.transform.position);
+                line.SetPosition(1, secondPoint.transform.position);
+            }
         }
     }
 }
