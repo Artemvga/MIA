@@ -10,6 +10,7 @@ public class Camera : MonoBehaviour
     private Coroutine checkingCoroutine;
     private bool _isHanded;
     private bool truePosition = false;
+    private bool trueStayPosition = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,10 @@ public class Camera : MonoBehaviour
         {
             truePosition = true;
             checkingCoroutine = StartCoroutine(Checking());
+        }
+        if (other.gameObject.CompareTag("StayTrigger"))
+        {
+            truePosition = true;
         }
     }
 
@@ -30,6 +35,10 @@ public class Camera : MonoBehaviour
                 checkingCoroutine = null;
                 truePosition = false;
             }
+        }
+        if (other.gameObject.CompareTag("StayTrigger"))
+        {
+            truePosition = false;
         }
     }
 
@@ -57,7 +66,7 @@ public class Camera : MonoBehaviour
             {
                 Debug.Log("Кнопка нажата");
 
-                if (truePosition == true)
+                if (truePosition == true && trueStayPosition == true)
                 {
                     Debug.Log("Камера в правильном положении!");
                 }
