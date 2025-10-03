@@ -6,17 +6,21 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+<<<<<<< HEAD
   - CameraTrigger
+=======
+  - OrangeCone
+>>>>>>> Envinronment
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Road
   - Water
   - UI
-  - 
-  - 
-  - 
+  - SideWalk
+  - TrafficLightCollider
+  - Car
   - 
   - 
   - 
