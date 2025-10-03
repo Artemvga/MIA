@@ -1,14 +1,12 @@
-using System.Collections;
 using UnityEngine;
 using Valve.VR;
-using Valve.VR.InteractionSystem;
 
 public class Roulette : MonoBehaviour
 {
     public LineRenderer line;
     public GameObject firstPoint;
     public GameObject secondPoint;
-    [Space] 
+    [Space]
     public bool useYToRoullete;
 
     private SteamVR_Action_Boolean action = SteamVR_Input.actionsBoolean[0];
@@ -43,7 +41,7 @@ public class Roulette : MonoBehaviour
                 _isPlacedSecond = true;
                 line.SetPosition(0, firstPoint.transform.position);
                 line.SetPosition(1, secondPoint.transform.position);
-                
+
                 var v1 = line.GetPosition(0);
                 var v2 = line.GetPosition(1);
                 if (!useYToRoullete)

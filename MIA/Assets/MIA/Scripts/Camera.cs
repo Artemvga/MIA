@@ -21,7 +21,7 @@ public class Camera : MonoBehaviour
         }
         if (other.gameObject.CompareTag("StayTrigger"))
         {
-            truePosition = true;
+            trueStayPosition = true;
         }
     }
 
@@ -38,7 +38,7 @@ public class Camera : MonoBehaviour
         }
         if (other.gameObject.CompareTag("StayTrigger"))
         {
-            truePosition = false;
+            trueStayPosition = false;
         }
     }
 
