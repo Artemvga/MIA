@@ -3,24 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - projectile
-  - FxTemporaire
-<<<<<<< HEAD
-  - CameraTrigger
-=======
-  - OrangeCone
->>>>>>> Envinronment
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Road
+  - 
   - Water
   - UI
-  - SideWalk
-  - TrafficLightCollider
-  - Car
+  - 
+  - 
+  - 
   - 
   - 
   - 
