@@ -132,7 +132,7 @@ public class CarAIController : MonoBehaviour
         Quaternion rot;
         collider.GetWorldPose(out pos, out rot);
         transform.position = pos;
-        transform.rotation = rot;
+        //transform.rotation = rot;
         //UnityEngine.Debug.Log(rot);
     }
 

@@ -559,7 +559,7 @@ MonoBehaviour:
   frontLeftCollider: {fileID: 7969025390542794173}
   rearRightCollider: {fileID: 6044388081439743037}
   rearLeftCollider: {fileID: 8624779331132295048}
-  nextCheckpoint: {fileID: 0}
+  nextCheckpoint: {fileID: 1823767312481301036}
   checks:
   - {fileID: 6973023699961813579}
   - {fileID: 431096650402961960}
