@@ -9,12 +9,13 @@ public class Camera : MonoBehaviour
     public int pointOfReference = 0;
     private Coroutine checkingCoroutine;
     private bool _isHanded;
+    private bool truePosition = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("CameraTrigger"))
         {
-            pointOfReference = int.Parse(other.name);
+            truePosition = true;
             checkingCoroutine = StartCoroutine(Checking());
         }
     }
@@ -27,6 +28,7 @@ public class Camera : MonoBehaviour
             {
                 StopCoroutine(checkingCoroutine);
                 checkingCoroutine = null;
+                truePosition = false;
             }
         }
     }
@@ -55,11 +57,7 @@ public class Camera : MonoBehaviour
             {
                 Debug.Log("Кнопка нажата");
 
-                float yRotation = transform.rotation.eulerAngles.y;
-                float xRotation = transform.rotation.eulerAngles.x;
-
-                if (((pointOfReference - 30) < yRotation && yRotation < (pointOfReference + 30)) &&
-                    (-20 < xRotation && xRotation < 20))
+                if (truePosition == true)
                 {
                     Debug.Log("Камера в правильном положении!");
                 }
