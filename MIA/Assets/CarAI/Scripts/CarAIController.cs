@@ -57,6 +57,8 @@ public class CarAIController : MonoBehaviour
     public float acceleration = 100f;
     [Tooltip("Breaking threshold. Tip: make it bigger than the acceleration threshold so that the car can break faster.")]
     public float breaking = 1000f;
+    [Space]
+    public float distanceOffset = 10f;
 
     //Private variables
     private Stopwatch stopwatch = new Stopwatch();
@@ -174,11 +176,14 @@ public class CarAIController : MonoBehaviour
             float distance = (transform.position - lastPos).magnitude;
             float time = stopwatch.Elapsed.Milliseconds / (float)1000;
 
-            kmh = (int)(3600 * distance / time / 1000);
-
-            lastPos = transform.position;
-            stopwatch.Reset();
-            stopwatch.Start();
+            if (time != 0)
+            {
+                kmh = (int)(3600 * distance / time / 1000);
+                lastPos = transform.position;
+            }
+                stopwatch.Reset();
+                stopwatch.Start();
+          
 
         }
         else
@@ -220,7 +225,7 @@ public class CarAIController : MonoBehaviour
 
             Turn(steerAngle);
 
-            float maxDistance = kmh * kmh / 100f + distanceFromObjects;
+            float maxDistance = kmh * kmh / 100f + distanceFromObjects + distanceOffset;
 
             RaycastHit carHit = new RaycastHit();
 
