@@ -5,10 +5,9 @@ using UnityEngine.AI;
 
 public class Car : MonoBehaviour
 {
-    [SerializeField] private GameObject _carPrefab;
+    [SerializeField] private List<GameObject> _carsPrefabs;
     [SerializeField] private int _carsAmountPerMinute;
     [SerializeField] private List<Transform> _spawnPositions;
-    [SerializeField] private List<Transform> _startedPoints;
 
     private IEnumerator Start()
     {
@@ -17,9 +16,15 @@ public class Car : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(time - 1, time + 1));
             var index = Random.Range(0, _spawnPositions.Count);
-            var position = /*_spawnPositions[index];*/ _spawnPositions[index];
-            var carAiController = Instantiate(_carPrefab, position.position, position.rotation).GetComponent<CarAIController>();
+            var position = _spawnPositions[index];
+            var carPrefab = _carsPrefabs[Random.Range(0, _carsPrefabs.Count)];
+            var carAiController = Instantiate(carPrefab, position.position, position.rotation).GetComponent<CarAIController>();
             carAiController.nextCheckpoint = _spawnPositions[index];
+
+            if (index > 3)
+            {
+                carAiController._isX = true;
+            }
         }
     }
 }

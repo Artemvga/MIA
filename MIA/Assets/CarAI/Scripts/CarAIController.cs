@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class CarAIController : MonoBehaviour
 {
     //Wheel transforms
 
+    public bool _isX;
+    
     [Header("Wheels")]
     public Transform frontRight;
     public Transform frontLeft;
@@ -128,14 +131,24 @@ public class CarAIController : MonoBehaviour
         return false;
     }
 
-    private void WheelUpdate(Transform transform, WheelCollider collider)
+    private void WheelUpdate(Transform wheelTransform, WheelCollider wheelCollider)
     {
         Vector3 pos;
         Quaternion rot;
-        collider.GetWorldPose(out pos, out rot);
-        transform.position = pos;
-        //transform.rotation = rot;
-        //UnityEngine.Debug.Log(rot);
+        wheelCollider.GetWorldPose(out pos, out rot);
+        //wheelTransform.position = pos;
+        Vector3 center = wheelTransform.GetComponent<Renderer>().bounds.center;
+        Vector3 dir;
+        if (_isX)
+        {
+            dir = new Vector3(rot.eulerAngles.x, 0f, 0f);
+        }
+        else
+        {
+            dir = new Vector3(0f, 0f, rot.eulerAngles.z);
+        }
+        /*wheelTransform.RotateAround(center, dir,
+            wheelCollider.rotationSpeed * Time.deltaTime);*/
     }
 
     /// <summary>
