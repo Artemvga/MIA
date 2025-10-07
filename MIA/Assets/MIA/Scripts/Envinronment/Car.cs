@@ -20,11 +20,6 @@ public class Car : MonoBehaviour
             var carPrefab = _carsPrefabs[Random.Range(0, _carsPrefabs.Count)];
             var carAiController = Instantiate(carPrefab, position.position, position.rotation).GetComponent<CarAIController>();
             carAiController.nextCheckpoint = _spawnPositions[index];
-
-            if (index > 3)
-            {
-                carAiController._isX = true;
-            }
         }
     }
 }

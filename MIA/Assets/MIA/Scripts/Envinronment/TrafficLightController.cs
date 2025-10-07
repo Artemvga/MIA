@@ -24,24 +24,24 @@ public class TrafficLightController : MonoBehaviour
             _lightMeshRenderer.material = _lightsMaterials[2];
             _pedestrianCrossing.SetActive(true);
             UpdateSurfaces();
-            yield return new WaitForSeconds(_timeBetweenChanging - 2);
+            yield return new WaitForSeconds(_timeBetweenChanging - 3);
             _lightMeshRenderer.material = _lightsMaterials[1];
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
         }
         _pedestrianCrossing.SetActive(false);
         UpdateSurfaces();
         while (true)
         {
             _lightMeshRenderer.material = _lightsMaterials[0];
-            yield return new WaitForSeconds(_timeBetweenChanging - 2);
+            yield return new WaitForSeconds(_timeBetweenChanging - 3);
             _lightMeshRenderer.material = _lightsMaterials[1];
             _pedestrianCrossing.SetActive(true);
             UpdateSurfaces();
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             _lightMeshRenderer.material = _lightsMaterials[2];
-            yield return new WaitForSeconds(_timeBetweenChanging - 2);
+            yield return new WaitForSeconds(_timeBetweenChanging - 3);
             _lightMeshRenderer.material = _lightsMaterials[1];
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             _pedestrianCrossing.SetActive(false);
             UpdateSurfaces();
         }

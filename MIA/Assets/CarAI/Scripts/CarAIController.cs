@@ -9,6 +9,7 @@ public class CarAIController : MonoBehaviour
     //Wheel transforms
 
     public bool _isX;
+    public bool _isY;
     
     [Header("Wheels")]
     public Transform frontRight;
@@ -137,18 +138,18 @@ public class CarAIController : MonoBehaviour
         Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
         //wheelTransform.position = pos;
-        Vector3 center = wheelTransform.GetComponent<Renderer>().bounds.center;
-        Vector3 dir;
         if (_isX)
         {
-            dir = new Vector3(rot.eulerAngles.x, 0f, 0f);
+            wheelTransform.Rotate(new Vector3(-rot.eulerAngles.x, 0f, 0f), Space.Self);
+        }
+        else if (_isY)
+        {
+            wheelTransform.Rotate(new Vector3(0f, -rot.eulerAngles.y, 0f), Space.Self);
         }
         else
         {
-            dir = new Vector3(0f, 0f, rot.eulerAngles.z);
+            wheelTransform.Rotate(new Vector3(0f, 0f, -rot.eulerAngles.z), Space.Self);
         }
-        /*wheelTransform.RotateAround(center, dir,
-            wheelCollider.rotationSpeed * Time.deltaTime);*/
     }
 
     /// <summary>
@@ -194,8 +195,9 @@ public class CarAIController : MonoBehaviour
                 kmh = (int)(3600 * distance / time / 1000);
                 lastPos = transform.position;
             }
-                stopwatch.Reset();
-                stopwatch.Start();
+            lastPos = transform.position;
+            stopwatch.Reset();
+            stopwatch.Start();
           
 
         }
