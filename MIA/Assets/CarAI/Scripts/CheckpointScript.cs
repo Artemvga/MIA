@@ -12,11 +12,11 @@ public class CheckpointScript : MonoBehaviour
     [Tooltip("List of the next checkpoints. If you add more that one checkpoint, the ai will choose one randomly.")]
     public List<Transform> nextCheckpoints = new List<Transform> ();
 
-    private int _staticSpeedlimit = 45;
+    private int _staticSpeedlimit = 30;
 
     void Awake()
     {
-        if (_staticSpeedlimit != 0 && speedLimit != 30) { speedLimit = _staticSpeedlimit; }
+        if (_staticSpeedlimit != 0) { speedLimit = _staticSpeedlimit; }
         for(int i = 0; i < nextCheckpoints.Count; i++)
         {
             if(nextCheckpoints[i] == null)
@@ -57,11 +57,6 @@ public class CheckpointScript : MonoBehaviour
 
                 if (nextCheckpoints.Count > 0)
                 {
-                    while (nextCheckpoints[index].gameObject.activeSelf == false)
-                    {
-                        index = Random.Range(0, nextCheckpoints.Count);
-                    }
-
                     controller.nextCheckpoint = nextCheckpoints[index];
                 }
                 else

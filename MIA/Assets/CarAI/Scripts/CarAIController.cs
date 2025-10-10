@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class CarAIController : MonoBehaviour
 {
     //Wheel transforms
 
-    public bool _isX;
-    public bool _isY;
-    
     [Header("Wheels")]
     public Transform frontRight;
     public Transform frontLeft;
@@ -132,24 +128,14 @@ public class CarAIController : MonoBehaviour
         return false;
     }
 
-    private void WheelUpdate(Transform wheelTransform, WheelCollider wheelCollider)
+    private void WheelUpdate(Transform transform, WheelCollider collider)
     {
         Vector3 pos;
         Quaternion rot;
-        wheelCollider.GetWorldPose(out pos, out rot);
-        //wheelTransform.position = pos;
-        if (_isX)
-        {
-            wheelTransform.Rotate(new Vector3(-rot.eulerAngles.x, 0f, 0f), Space.Self);
-        }
-        else if (_isY)
-        {
-            wheelTransform.Rotate(new Vector3(0f, -rot.eulerAngles.y, 0f), Space.Self);
-        }
-        else
-        {
-            wheelTransform.Rotate(new Vector3(0f, 0f, -rot.eulerAngles.z), Space.Self);
-        }
+        collider.GetWorldPose(out pos, out rot);
+        transform.position = pos;
+        //transform.rotation = rot;
+        //UnityEngine.Debug.Log(rot);
     }
 
     /// <summary>
@@ -195,9 +181,8 @@ public class CarAIController : MonoBehaviour
                 kmh = (int)(3600 * distance / time / 1000);
                 lastPos = transform.position;
             }
-
-            stopwatch.Reset();
-            stopwatch.Start();
+                stopwatch.Reset();
+                stopwatch.Start();
           
 
         }

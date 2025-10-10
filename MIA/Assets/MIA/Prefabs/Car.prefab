@@ -551,8 +551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da7bfc9879eeba428da5e714bcf4cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isX: 0
-  _isY: 1
   frontRight: {fileID: 4266654395846750041}
   frontLeft: {fileID: 6701324129405649335}
   rearRight: {fileID: 9117894739797081195}
