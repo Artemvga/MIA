@@ -18,6 +18,7 @@ public class Base : MonoBehaviour
     private bool inspectionDTPComplite = false;
     private bool installationConeRedComplite = false;
     private bool installationConeOrangeComplite = false;
+    private bool makePhotoCompition = false;
 
     public void Radio()
     {
@@ -25,6 +26,7 @@ public class Base : MonoBehaviour
         {
             radioComplite = true;
             //Вызвать звук одобрения от инспектора
+            Debug.Log("Вы сообщили о прибытии");
         }
     }
 
@@ -34,10 +36,12 @@ public class Base : MonoBehaviour
         {
             inspectionDTPComplite = true;
             //Вызвать звук одобрения от инспектора
+            Debug.Log("Вы сообщили о прибытии");
         }
         else
         {
             //Вызвать звук неодобрения
+            Debug.Log("Вы не выполнили предыдущие действия");
         }
     }
 
@@ -47,10 +51,12 @@ public class Base : MonoBehaviour
         {
             installationConeRedComplite = true;
             //Вызвать звук одобрения от инспектора
+            Debug.Log("Вы установили красный конус");
         }
         else
         {
             //Вызвать звук неодобрения
+            Debug.Log("Вы не выполнили предыдущие действия");
         }
     }
 
@@ -59,11 +65,28 @@ public class Base : MonoBehaviour
         if(!installationConeOrangeComplite && installationConeRedComplite)
         {
             installationConeOrangeComplite = true;
-            //Вызвать звук одобрения от инспектора  
+            //Вызвать звук одобрения от инспектора
+            Debug.Log("Вы расставили оранжевые конусы");
         }
         else
         {
             //Вызвать звук неодобрения
+            Debug.Log("Вы не выполнили предыдущие действия");
+        }
+    }
+
+    public void MakePhoto()
+    {
+        if (!makePhotoCompition && installationConeOrangeComplite)
+        {
+            installationConeOrangeComplite = true;
+            //Вызвать звук одобрения от инспектора  
+            Debug.Log("Вы сделали фото улици, переходите к замерам");
+        }
+        else
+        {
+            //Вызвать звук неодобрения
+            Debug.Log("Вы не выполнили предыдущие действия");
         }
     }
 
