@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.2.1.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.2.1.tgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/CarAIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/CarAIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/BlueCar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/BlueCar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Prefabs/Car.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/HondaCar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Prefabs/HondaCar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/TrafficLightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/TrafficLightController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +26,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/50cef547136cdc141995d1711546dca37446f6f270f77467af10dfd676dbd3d0/System.Diagnostics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MIA/Scripts/Cones/TriggerChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -35,7 +42,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;16d80fef&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Map&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -46,7 +53,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.52f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="D:\Proramms\Unity Hub\2022.3.52f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -57,7 +64,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.52f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="D:\Proramms\Unity Hub\2022.3.52f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,6 +114,9 @@
       <workItem from="1758705414370" duration="777000" />
       <workItem from="1758717677562" duration="1558000" />
       <workItem from="1758877486030" duration="2000" />
+      <workItem from="1759736913723" duration="579000" />
+      <workItem from="1759756308904" duration="290000" />
+      <workItem from="1759756705495" duration="4685000" />
     </task>
     <servers />
   </component>
