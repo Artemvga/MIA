@@ -17,7 +17,6 @@ public class OrangeConeTrigger : MonoBehaviour
                 if (!orangeIn)
                 {
                     orangeIn = true; //triggerChecker.triggerCount++;
-                    Base.instance.InstallationConeOrange();
                 }
             }
             else
