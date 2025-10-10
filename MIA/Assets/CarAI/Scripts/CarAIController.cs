@@ -195,7 +195,7 @@ public class CarAIController : MonoBehaviour
                 kmh = (int)(3600 * distance / time / 1000);
                 lastPos = transform.position;
             }
-            lastPos = transform.position;
+
             stopwatch.Reset();
             stopwatch.Start();
           
