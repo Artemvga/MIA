@@ -18,14 +18,15 @@ public class Base : MonoBehaviour
     private bool inspectionDTPComplite = false;
     private bool installationConeRedComplite = false;
     private bool installationConeOrangeComplite = false;
+    private bool makePhotoCompition = false;
 
     public void Radio()
     {
         if(!radioComplite)
         {
             radioComplite = true;
-            //Вызвать звук одобрения от инспектора
-            Debug.Log("Вы сообщили о прибытии");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г®Г¤Г®ГЎГ°ГҐГ­ГЁГї Г®ГІ ГЁГ­Г±ГЇГҐГЄГІГ®Г°Г 
+            Debug.Log("Г‚Г» Г±Г®Г®ГЎГ№ГЁГ«ГЁ Г® ГЇГ°ГЁГЎГ»ГІГЁГЁ");
         }
     }
 
@@ -34,13 +35,13 @@ public class Base : MonoBehaviour
         if(!inspectionDTPComplite && radioComplite)
         {
             inspectionDTPComplite = true;
-            //Вызвать звук одобрения от инспектора
-            Debug.Log("Вы проверили участников ДТП");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г®Г¤Г®ГЎГ°ГҐГ­ГЁГї Г®ГІ ГЁГ­Г±ГЇГҐГЄГІГ®Г°Г 
+            Debug.Log("Г‚Г» Г±Г®Г®ГЎГ№ГЁГ«ГЁ Г® ГЇГ°ГЁГЎГ»ГІГЁГЁ");
         }
         else
         {
-            //Вызвать звук неодобрения
-            Debug.Log("Вы еще не сообщили о прибытии");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г­ГҐГ®Г¤Г®ГЎГ°ГҐГ­ГЁГї
+            Debug.Log("Г‚Г» Г­ГҐ ГўГ»ГЇГ®Г«Г­ГЁГ«ГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГҐ Г¤ГҐГ©Г±ГІГўГЁГї");
         }
     }
 
@@ -49,13 +50,13 @@ public class Base : MonoBehaviour
         if (!installationConeRedComplite && inspectionDTPComplite)
         {
             installationConeRedComplite = true;
-            //Вызвать звук одобрения от инспектора
-            Debug.Log("Вы установили красный конус в месте столкновения");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г®Г¤Г®ГЎГ°ГҐГ­ГЁГї Г®ГІ ГЁГ­Г±ГЇГҐГЄГІГ®Г°Г 
+            Debug.Log("Г‚Г» ГіГ±ГІГ Г­Г®ГўГЁГ«ГЁ ГЄГ°Г Г±Г­Г»Г© ГЄГ®Г­ГіГ±");
         }
         else
         {
-            //Вызвать звук неодобрения
-            Debug.Log("Вы не выполнили предыдущий шаг");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г­ГҐГ®Г¤Г®ГЎГ°ГҐГ­ГЁГї
+            Debug.Log("Г‚Г» Г­ГҐ ГўГ»ГЇГ®Г«Г­ГЁГ«ГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГҐ Г¤ГҐГ©Г±ГІГўГЁГї");
         }
     }
 
@@ -64,13 +65,28 @@ public class Base : MonoBehaviour
         if(!installationConeOrangeComplite && installationConeRedComplite)
         {
             installationConeOrangeComplite = true;
-            //Вызвать звук одобрения от инспектора  
-            Debug.Log("Вы установили оранжевые конусы");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г®Г¤Г®ГЎГ°ГҐГ­ГЁГї Г®ГІ ГЁГ­Г±ГЇГҐГЄГІГ®Г°Г 
+            Debug.Log("Г‚Г» Г°Г Г±Г±ГІГ ГўГЁГ«ГЁ Г®Г°Г Г­Г¦ГҐГўГ»ГҐ ГЄГ®Г­ГіГ±Г»");
         }
         else
         {
-            //Вызвать звук неодобрения
-            Debug.Log("Вы не выполнили предыдущий шаг");
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г­ГҐГ®Г¤Г®ГЎГ°ГҐГ­ГЁГї
+            Debug.Log("Г‚Г» Г­ГҐ ГўГ»ГЇГ®Г«Г­ГЁГ«ГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГҐ Г¤ГҐГ©Г±ГІГўГЁГї");
+        }
+    }
+
+    public void MakePhoto()
+    {
+        if (!makePhotoCompition && installationConeOrangeComplite)
+        {
+            installationConeOrangeComplite = true;
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г®Г¤Г®ГЎГ°ГҐГ­ГЁГї Г®ГІ ГЁГ­Г±ГЇГҐГЄГІГ®Г°Г   
+            Debug.Log("Г‚Г» Г±Г¤ГҐГ«Г Г«ГЁ ГґГ®ГІГ® ГіГ«ГЁГ¶ГЁ, ГЇГҐГ°ГҐГµГ®Г¤ГЁГІГҐ ГЄ Г§Г Г¬ГҐГ°Г Г¬");
+        }
+        else
+        {
+            //Г‚Г»Г§ГўГ ГІГј Г§ГўГіГЄ Г­ГҐГ®Г¤Г®ГЎГ°ГҐГ­ГЁГї
+            Debug.Log("Г‚Г» Г­ГҐ ГўГ»ГЇГ®Г«Г­ГЁГ«ГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГҐ Г¤ГҐГ©Г±ГІГўГЁГї");
         }
     }
 
