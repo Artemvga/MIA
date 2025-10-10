@@ -57,6 +57,11 @@ public class CheckpointScript : MonoBehaviour
 
                 if (nextCheckpoints.Count > 0)
                 {
+                    while (nextCheckpoints[index].gameObject.activeSelf == false)
+                    {
+                        index = Random.Range(0, nextCheckpoints.Count);
+                    }
+
                     controller.nextCheckpoint = nextCheckpoints[index];
                 }
                 else
