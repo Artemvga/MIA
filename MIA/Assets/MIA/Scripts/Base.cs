@@ -30,28 +30,40 @@ public class Base : MonoBehaviour
 
     public void InspectionDTP()
     {
-        if(!inspectionDTPComplite)
+        if(!inspectionDTPComplite && radioComplite)
         {
             inspectionDTPComplite = true;
             //Вызвать звук одобрения от инспектора
+        }
+        else
+        {
+            //Вызвать звук неодобрения
         }
     }
 
     public void InstallationConeRed()
     {
-        if (!installationConeRedComplite)
+        if (!installationConeRedComplite && inspectionDTPComplite)
         {
             installationConeRedComplite = true;
             //Вызвать звук одобрения от инспектора
+        }
+        else
+        {
+            //Вызвать звук неодобрения
         }
     }
 
     public void InstallationConeOrange()
     {
-        if(!installationConeOrangeComplite)
+        if(!installationConeOrangeComplite && installationConeRedComplite)
         {
             installationConeOrangeComplite = true;
             //Вызвать звук одобрения от инспектора  
+        }
+        else
+        {
+            //Вызвать звук неодобрения
         }
     }
 
