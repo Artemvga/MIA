@@ -26,6 +26,8 @@ public class Roulette : MonoBehaviour
 
     private bool _isPlacedFirst;
     private bool _isPlacedSecond;
+    public bool IsPlacedFirst { get {return _isPlacedFirst;}}
+    public bool IsPlacedSecond { get {return _isPlacedSecond;}}
     public void Checking()
     {
         if (action.GetStateDown(SteamVR_Input_Sources.Any))
