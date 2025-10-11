@@ -87,7 +87,7 @@ public class PhotoCamera : MonoBehaviour
     List<string> GetCameraTriggerSequence()
     {
         Vector3 rayStart = transform.position;
-        Vector3 rayDirection = transform.forward;
+        Vector3 rayDirection = -transform.right;
 
         RaycastHit[] hits = Physics.RaycastAll(rayStart, rayDirection, rayDistance, triggerLayerMask);
 
