@@ -7212,11 +7212,8 @@ MonoBehaviour:
   - {fileID: 688059841}
   - {fileID: 805788879}
   redTrigger: {fileID: 472425210}
-  defaultCheckpoints:
-  - {fileID: 1746242629}
-  afterPlacingCheckpoints:
-  - {fileID: 1307210503}
-  - {fileID: 1939915649}
+  defaultCheckpoints: []
+  afterPlacingCheckpoints: []
 --- !u!1 &1606284474
 GameObject:
   m_ObjectHideFlags: 0
