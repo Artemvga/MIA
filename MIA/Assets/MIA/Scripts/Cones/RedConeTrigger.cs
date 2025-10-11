@@ -17,6 +17,7 @@ public class RedConeTrigger : MonoBehaviour
                         if (!redIn)
                         {
                             redIn = true;
+                            Base.instance.InstallationConeRed();
                             //triggerChecker.triggerCount++;
                         }
                     }

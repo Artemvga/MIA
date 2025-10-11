@@ -18,6 +18,7 @@ public class Base : MonoBehaviour
     private bool inspectionDTPComplite = false;
     private bool installationConeRedComplite = false;
     private bool installationConeOrangeComplite = false;
+    private bool makePhotoCompition = false;
 
     public void Radio()
     {
@@ -35,20 +36,12 @@ public class Base : MonoBehaviour
         {
             inspectionDTPComplite = true;
             //Вызвать звук одобрения от инспектора
-<<<<<<< HEAD
             Debug.Log("Вы сообщили о прибытии");
-=======
-            Debug.Log("Вы проверили участников ДТП");
->>>>>>> Map
         }
         else
         {
             //Вызвать звук неодобрения
-<<<<<<< HEAD
             Debug.Log("Вы не выполнили предыдущие действия");
-=======
-            Debug.Log("Вы еще не сообщили о прибытии");
->>>>>>> Map
         }
     }
 
@@ -58,20 +51,12 @@ public class Base : MonoBehaviour
         {
             installationConeRedComplite = true;
             //Вызвать звук одобрения от инспектора
-<<<<<<< HEAD
             Debug.Log("Вы установили красный конус");
-=======
-            Debug.Log("Вы установили красный конус в месте столкновения");
->>>>>>> Map
         }
         else
         {
             //Вызвать звук неодобрения
-<<<<<<< HEAD
             Debug.Log("Вы не выполнили предыдущие действия");
-=======
-            Debug.Log("Вы не выполнили предыдущий шаг");
->>>>>>> Map
         }
     }
 
@@ -80,18 +65,12 @@ public class Base : MonoBehaviour
         if(!installationConeOrangeComplite && installationConeRedComplite)
         {
             installationConeOrangeComplite = true;
-<<<<<<< HEAD
             //Вызвать звук одобрения от инспектора
             Debug.Log("Вы расставили оранжевые конусы");
-=======
-            //Вызвать звук одобрения от инспектора  
-            Debug.Log("Вы установили оранжевые конусы");
->>>>>>> Map
         }
         else
         {
             //Вызвать звук неодобрения
-<<<<<<< HEAD
             Debug.Log("Вы не выполнили предыдущие действия");
         }
     }
@@ -108,9 +87,6 @@ public class Base : MonoBehaviour
         {
             //Вызвать звук неодобрения
             Debug.Log("Вы не выполнили предыдущие действия");
-=======
-            Debug.Log("Вы не выполнили предыдущий шаг");
->>>>>>> Map
         }
     }
 
