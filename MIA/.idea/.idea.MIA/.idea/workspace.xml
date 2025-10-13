@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/PhotoCamera (1).fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/PhotoCamera (1).fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/PhotoCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/PhotoCamera.cs" afterDir="false" />
-    </list>
+    <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +105,7 @@
       <workItem from="1759736913723" duration="579000" />
       <workItem from="1759756308904" duration="290000" />
       <workItem from="1759756705495" duration="5893000" />
-      <workItem from="1760353307359" duration="1667000" />
+      <workItem from="1760353307359" duration="1838000" />
     </task>
     <servers />
   </component>
