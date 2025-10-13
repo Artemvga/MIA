@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="" />
+    <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/Constances.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/Constances/SoundsConstanse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/Constances/SoundsConstanse.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Base.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +112,7 @@
       <workItem from="1759756308904" duration="290000" />
       <workItem from="1759756705495" duration="5893000" />
       <workItem from="1760353307359" duration="1838000" />
+      <workItem from="1760360983617" duration="3345000" />
     </task>
     <servers />
   </component>

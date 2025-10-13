@@ -1,32 +1,33 @@
 using System.Collections.Generic;
+using CarAI.Scripts.Constants;
 using UnityEngine;
 
 public class Base : MonoBehaviour
 {
 
     public List<AudioClip> somethingWrongClips = new List<AudioClip>();
+    public SoundsManager soundsManager;
+    public static Base instance { get; private set; }
     
-    public static Base instance;
-    public static Base Instance
+    private  bool _radioComplete = false;
+    private bool _inspectionDtpComplete = false;
+    private bool _installationConeRedComplete = false;
+    private bool _installationConeOrangeComplete = false;
+    private bool _makePhotoQuestComplete = false;
+
+    private void Start()
     {
-        get
-        {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<Base>();
-            return instance;
-        }
+        if (instance == null)
+            instance = this;
+        
+        soundsManager.PlaySound(SoundsConstances.BACKGROUND_SOUND);
     }
-    private  bool radioComplite = false;
-    private bool inspectionDTPComplite = false;
-    private bool installationConeRedComplite = false;
-    private bool installationConeOrangeComplite = false;
-    private bool makePhotoCompition = false;
 
     public void Radio()
     {
-        if(!radioComplite)
+        if(!_radioComplete)
         {
-            radioComplite = true;
+            _radioComplete = true;
             //??????? ???? ????????? ?? ??????????
             Debug.Log("?? ???????? ? ????????");
         }
@@ -34,9 +35,9 @@ public class Base : MonoBehaviour
 
     public void InspectionDTP()
     {
-        if(!inspectionDTPComplite && radioComplite)
+        if(!_inspectionDtpComplete && _radioComplete)
         {
-            inspectionDTPComplite = true;
+            _inspectionDtpComplete = true;
             //??????? ???? ????????? ?? ??????????
             Debug.Log("?? ???????? ? ????????");
         }
@@ -49,9 +50,9 @@ public class Base : MonoBehaviour
 
     public void InstallationConeRed()
     {
-        if (!installationConeRedComplite && inspectionDTPComplite)
+        if (!_installationConeRedComplete && _inspectionDtpComplete)
         {
-            installationConeRedComplite = true;
+            _installationConeRedComplete = true;
             //??????? ???? ????????? ?? ??????????
             Debug.Log("?? ?????????? ??????? ?????");
         }
@@ -64,9 +65,9 @@ public class Base : MonoBehaviour
 
     public void InstallationConeOrange()
     {
-        if(!installationConeOrangeComplite && installationConeRedComplite)
+        if(!_installationConeOrangeComplete && _installationConeRedComplete)
         {
-            installationConeOrangeComplite = true;
+            _installationConeOrangeComplete = true;
             //??????? ???? ????????? ?? ??????????
             Debug.Log("?? ?????????? ????????? ??????");
         }
@@ -79,9 +80,9 @@ public class Base : MonoBehaviour
 
     public void MakePhoto()
     {
-        if (!makePhotoCompition && installationConeOrangeComplite)
+        if (!_makePhotoQuestComplete && _installationConeOrangeComplete)
         {
-            installationConeOrangeComplite = true;
+            _installationConeOrangeComplete = true;
             //??????? ???? ????????? ?? ??????????  
             Debug.Log("?? ??????? ???? ?????, ?????????? ? ???????");
         }
