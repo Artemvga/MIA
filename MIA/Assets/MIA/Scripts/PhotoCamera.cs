@@ -101,7 +101,7 @@ public class PhotoCamera : MonoBehaviour
             if (cameraTrigger != null)
             {
                 cameraTriggerNames.Add(cameraTrigger.gameObject.name);
-                Debug.Log($"Луч попал в CameraTrigger: {cameraTrigger.gameObject.name} на расстоянии {hit.distance:F2}");
+                //Debug.Log($"Луч попал в CameraTrigger: {cameraTrigger.gameObject.name} на расстоянии {hit.distance:F2}");
             }
         }
 
@@ -113,9 +113,12 @@ public class PhotoCamera : MonoBehaviour
         if (triggerSequence.Count < 2)
         {
             if (triggerSequence.Count == 1)
-                Debug.Log($"Недостаточно триггеров: только {triggerSequence[0]}");
-            else
-                Debug.Log($"Недостаточно триггеров: {triggerSequence.Count}");
+            {
+                //Debug.Log($"Недостаточно триггеров: только {triggerSequence[0]}");
+            }
+            else {
+                //Debug.Log($"Недостаточно триггеров: {triggerSequence.Count}");
+            }
             return false;
         }
 

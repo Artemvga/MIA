@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/CarAIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/CarAIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/BlueCar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/BlueCar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Prefabs/Car.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/HondaCar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Prefabs/HondaCar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/PhotoCamera (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/PhotoCamera (1).fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/TrafficLightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Envinronment/TrafficLightController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/PhotoCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/PhotoCamera.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,8 @@
       <workItem from="1758877486030" duration="2000" />
       <workItem from="1759736913723" duration="579000" />
       <workItem from="1759756308904" duration="290000" />
-      <workItem from="1759756705495" duration="4685000" />
+      <workItem from="1759756705495" duration="5893000" />
+      <workItem from="1760353307359" duration="1667000" />
     </task>
     <servers />
   </component>
