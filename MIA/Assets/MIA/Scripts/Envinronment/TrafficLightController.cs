@@ -10,6 +10,7 @@ public class TrafficLightController : MonoBehaviour
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private List<Material> _lightsMaterials;
     [SerializeField] private List<MeshRenderer> _lightMeshRenderer;
+    [SerializeField] private List<MeshRenderer> _pedestrianLightMeshRenderer;
     [SerializeField] private GameObject _pedestrianCrossing;
     [SerializeField] private List<NavMeshSurface> _surfaces;
 
@@ -52,9 +53,29 @@ public class TrafficLightController : MonoBehaviour
     {
         foreach (var el in _lightMeshRenderer)
         {
-            el.material = _defaultMaterial;
+            if (el != null)
+            { 
+                el.material = _defaultMaterial;
+            }
+
+            if (_lightMeshRenderer[index] != null)
+            {
+                _lightMeshRenderer[index].material = material;
+            }
         }
-        _lightMeshRenderer[index].material = material;
+
+        foreach (var el in _pedestrianLightMeshRenderer)
+        {
+            if (el != null)
+            {
+                el.material = _defaultMaterial;
+            }
+
+            if (_pedestrianLightMeshRenderer[index] != null)
+            {
+                _pedestrianLightMeshRenderer[index].material = material;
+            }
+        }
     }
 
     private void UpdateSurfaces()

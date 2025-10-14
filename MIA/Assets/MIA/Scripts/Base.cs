@@ -19,7 +19,8 @@ public class Base : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        
+
+        Debug.Log(SoundsConstances.BACKGROUND_SOUND);
         soundsManager.PlaySound(SoundsConstances.BACKGROUND_SOUND);
     }
 

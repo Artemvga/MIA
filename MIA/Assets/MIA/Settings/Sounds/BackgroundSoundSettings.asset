@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f251ed7d8f51164796690309b6e5f94, type: 3}
-  m_Name: SoundSettings
+  m_Name: BackgroundSoundSettings
   m_EditorClassIdentifier: 
   Sound: {fileID: 8300000, guid: 4adfe3682de17c04e9a7e83d5cee927f, type: 3}
   Volume: 0.2
