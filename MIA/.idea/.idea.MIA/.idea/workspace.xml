@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Roulette.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Tablet/MapCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Tablet/MapCanvas.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <workItem from="1759832901953" duration="13655000" />
       <workItem from="1760090257841" duration="19000" />
       <workItem from="1760090295016" duration="4197000" />
-      <workItem from="1760095598562" duration="935000" />
+      <workItem from="1760095598562" duration="4604000" />
     </task>
     <servers />
   </component>

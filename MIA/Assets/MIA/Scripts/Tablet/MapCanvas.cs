@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Radishmouse;
 using UnityEngine;
 
 
@@ -13,6 +14,7 @@ public class MapCanvas : MonoBehaviour
     public GameObject circle2;
     public GameObject roullete;
     public GameObject textpls;
+    public GameObject line;
 
     
 
@@ -34,8 +36,15 @@ public class MapCanvas : MonoBehaviour
             circleImg2.SetActive(true);
             circleImg2.GetComponent<RectTransform>().anchoredPosition = 
                 new Vector3(circle2.transform.position.x, circle2.transform.position.z, 0);
+            line.SetActive(true);
+            line.GetComponent<UILineRenderer>().points[0] =  circleImg1.transform.position;
+            line.GetComponent<UILineRenderer>().points[1] =  circleImg2.transform.position;
             
         }
-        else if(circleImg2.activeSelf){circleImg2.SetActive(false);}
+        else if (circleImg2.activeSelf)
+        {
+            circleImg2.SetActive(false);
+            line.SetActive(false);
+        }
     }
 }
