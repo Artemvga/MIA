@@ -138,17 +138,20 @@ public class CarAIController : MonoBehaviour
         Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
         //wheelTransform.position = pos;
-        if (_isX)
+        if (kmh > 1)
         {
-            wheelTransform.Rotate(new Vector3(-rot.eulerAngles.x, 0f, 0f), Space.Self);
-        }
-        else if (_isY)
-        {
-            wheelTransform.Rotate(new Vector3(0f, -rot.eulerAngles.y, 0f), Space.Self);
-        }
-        else
-        {
-            wheelTransform.Rotate(new Vector3(0f, 0f, -rot.eulerAngles.z), Space.Self);
+            if (_isX)
+            {
+                wheelTransform.Rotate(new Vector3(-rot.eulerAngles.x, 0f, 0f), Space.Self);
+            }
+            else if (_isY)
+            {
+                wheelTransform.Rotate(new Vector3(0f, -rot.eulerAngles.y, 0f), Space.Self);
+            }
+            else
+            {
+                wheelTransform.Rotate(new Vector3(0f, 0f, -rot.eulerAngles.z), Space.Self);
+            }
         }
     }
 
