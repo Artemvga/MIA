@@ -623,6 +623,7 @@ MonoBehaviour:
   - {fileID: 5393853615157278073}
   - {fileID: 6614538836516653868}
   - {fileID: 5772873441962024799}
+  _pedestrianLightMeshRenderer: []
   _pedestrianCrossing: {fileID: 0}
   _surfaces: []
 --- !u!1 &4297981057518511937
@@ -957,6 +958,7 @@ GameObject:
   - component: {fileID: 6186505325900075601}
   - component: {fileID: 9171725614397107555}
   - component: {fileID: 3867217954418476611}
+  - component: {fileID: 6790145689630219218}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -1029,6 +1031,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6790145689630219218
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249254264070024348}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 7cb6b49f8d271bf4784f1daadc1cf77a, type: 3}
 --- !u!1 &5432596153565391764
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Radishmouse;
 using TMPro;
 using UnityEngine;
@@ -14,8 +12,8 @@ public class MapCanvas : MonoBehaviour
     public GameObject circleImg2;
     public GameObject circle1;
     public GameObject circle2;
-    public GameObject roullete;
-    public GameObject distanceText;
+    public Roulette roullete;
+    public TextMeshProUGUI distanceText;
     public GameObject line;
 
     
@@ -41,8 +39,8 @@ public class MapCanvas : MonoBehaviour
             line.SetActive(true);
             line.GetComponent<UILineRenderer>().points[0] =  circleImg1.GetComponent<RectTransform>().anchoredPosition;
             line.GetComponent<UILineRenderer>().points[1] =  circleImg2.GetComponent<RectTransform>().anchoredPosition;
-            distanceText.SetActive(true);
-            distanceText.GetComponent<TextMeshPro>().text = roullete.GetComponent<Roulette>().DistanceBetweenPoints.ToString();
+            distanceText.gameObject.SetActive(true);
+            distanceText.text = roullete.GetComponent<Roulette>().DistanceBetweenPoints.ToString();
             distanceText.GetComponent<RectTransform>().anchoredPosition =
                 (circleImg1.GetComponent<RectTransform>().anchoredPosition +
                 circleImg2.GetComponent<RectTransform>().anchoredPosition)/2;
@@ -52,7 +50,7 @@ public class MapCanvas : MonoBehaviour
         {
             circleImg2.SetActive(false);
             line.SetActive(false);
-            distanceText.SetActive(false);
+            distanceText.gameObject.SetActive(false);
         }
     }
 }
