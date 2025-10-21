@@ -6,6 +6,8 @@ public class Roulette : MonoBehaviour
     public LineRenderer line;
     public GameObject firstPoint;
     public GameObject secondPoint;
+    private float distanceBetweenPoints;
+    public float DistanceBetweenPoints {get {return distanceBetweenPoints;}}
     [Space]
     public bool useYToRoullete;
 
@@ -26,6 +28,8 @@ public class Roulette : MonoBehaviour
 
     private bool _isPlacedFirst;
     private bool _isPlacedSecond;
+    public bool IsPlacedFirst { get {return _isPlacedFirst;}}
+    public bool IsPlacedSecond { get {return _isPlacedSecond;}}
     public void Checking()
     {
         if (action.GetStateDown(SteamVR_Input_Sources.Any))
@@ -46,11 +50,13 @@ public class Roulette : MonoBehaviour
                 var v2 = line.GetPosition(1);
                 if (!useYToRoullete)
                 {
-                    Debug.Log(Mathf.Sqrt(Mathf.Pow((v1.x - v2.x), 2) + Mathf.Pow((v1.z - v2.z), 2)));
+                    distanceBetweenPoints = Mathf.Sqrt(Mathf.Pow((v1.x - v2.x), 2) + Mathf.Pow((v1.z - v2.z), 2));
+                    Debug.Log(distanceBetweenPoints);
                 }
                 else
                 {
-                    Debug.Log(Vector3.Distance(v1, v2));
+                    distanceBetweenPoints = Vector3.Distance(v1, v2);
+                    Debug.Log(distanceBetweenPoints);
                 }
             }
             else
