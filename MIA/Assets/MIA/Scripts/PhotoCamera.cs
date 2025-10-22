@@ -59,7 +59,7 @@ public class PhotoCamera : MonoBehaviour
         UpdateRayVisualization();
 
         // Проверяем нажатие кнопки только если в зоне StayTrigger
-        if (lineRenderer.startColor == validRayColor && action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded)
+        if (lineRenderer.startColor == validRayColor && action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded )
         {
             TryTakePhoto();
         }
