@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CarAI.Scripts.Constants;
+using TMPro;
 using UnityEngine;
 
 public class Base : MonoBehaviour
@@ -10,10 +11,16 @@ public class Base : MonoBehaviour
     public static Base instance { get; private set; }
     
     private  bool _radioComplete = false;
+    private bool _makeRoullete = false;
+    private bool _makeCone = false;
     private bool _inspectionDtpComplete = false;
-    private bool _installationConeRedComplete = false;
-    private bool _installationConeOrangeComplete = false;
+    /*private bool _installationConeRedComplete = false;
+    private bool _installationConeOrangeComplete = false;*/
     private bool _makePhotoQuestComplete = false;
+    
+    public TextMeshProUGUI _coneText;
+    public TextMeshProUGUI _roulleteText;
+    public TextMeshProUGUI _photoText;
 
     private void Start()
     {
@@ -49,7 +56,7 @@ public class Base : MonoBehaviour
         }
     }
 
-    public void InstallationConeRed()
+    /*public void InstallationConeRed()
     {
         if (!_installationConeRedComplete && _inspectionDtpComplete)
         {
@@ -77,11 +84,14 @@ public class Base : MonoBehaviour
             //??????? ???? ???????????
             Debug.Log("?? ?? ????????? ?????????? ????????");
         }
-    }
+    }*/
 
     public void MakePhoto()
     {
-        if (!_makePhotoQuestComplete && _installationConeOrangeComplete)
+        _makePhotoQuestComplete = true;
+        _photoText.color = Color.green;
+        Debug.Log("Pobeda");
+        /*if (!_makePhotoQuestComplete && _installationConeOrangeComplete)
         {
             _installationConeOrangeComplete = true;
             //??????? ???? ????????? ?? ??????????  
@@ -91,7 +101,21 @@ public class Base : MonoBehaviour
         {
             //??????? ???? ???????????
             Debug.Log("?? ?? ????????? ?????????? ????????");
-        }
+        }*/
+    }
+    
+    public void RoulleteMake()
+    {
+        _makeRoullete = true;
+        _roulleteText.color = Color.green;
+        Debug.Log("Pobeda2");
+    }
+    
+    public void ConeMake()
+    {
+        _makeCone = true;
+        _coneText.color = Color.green;
+        Debug.Log("Pobeda2");
     }
 
 }

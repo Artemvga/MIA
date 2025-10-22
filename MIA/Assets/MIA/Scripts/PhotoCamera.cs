@@ -59,10 +59,17 @@ public class PhotoCamera : MonoBehaviour
         UpdateRayVisualization();
 
         // Проверяем нажатие кнопки только если в зоне StayTrigger
-        if (lineRenderer.startColor == validRayColor && action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded )
+        if (lineRenderer.startColor == validRayColor && action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded)
         {
             TryTakePhoto();
         }
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            TryTakePhoto();
+        }
+#endif
     }
 
     void UpdateRayVisualization()
@@ -207,7 +214,7 @@ public class PhotoCamera : MonoBehaviour
 
     void CheckAllPhotosCompleted()
     {
-        bool allCompleted = true;
+        /*bool allCompleted = true;
         for (int i = 0; i < correctPhotos.Length; i++)
         {
             if (!correctPhotos[i])
@@ -215,9 +222,17 @@ public class PhotoCamera : MonoBehaviour
                 allCompleted = false;
                 break;
             }
+        }*/
+        int bad = 0;
+        for (int i = 0; i < correctPhotos.Length; i++)
+        {
+            if (!correctPhotos[i])
+            {
+                bad++;
+            }
         }
-
-        if (allCompleted)
+        
+        if (bad <= 1)
         {
             Debug.Log("<color=green><b>🎉 ВСЕ 4 ФОТОГРАФИИ УСПЕШНО СДЕЛАНЫ!</b></color>");
             if (Base.instance != null)

@@ -45,6 +45,7 @@ public class TriggerChecker : MonoBehaviour
         if (triggerCount == 4)
         {
             Debug.Log("Все на месте");
+            Base.instance.ConeMake();
         }
     }
 }
