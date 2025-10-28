@@ -35,9 +35,5 @@ public class OrangeConeTrigger : MonoBehaviour
         if (collider.gameObject.CompareTag("OrangeCone"))
             orangeIn = false;
     }
-    
-    private void Update()
-    {
-        //Debug.Log("Orange: " + orangeIn);
-    }
+   
 }
