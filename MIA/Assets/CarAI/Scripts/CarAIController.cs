@@ -110,7 +110,7 @@ public class CarAIController : MonoBehaviour
             if(deleteCar)
             {
                 UnityEngine.Debug.Log("Car " + gameObject.name + " destroyed for flipping over.");
-                //Destroy(gameObject);//
+                Destroy(gameObject);
             }
         }
 
@@ -254,6 +254,7 @@ public class CarAIController : MonoBehaviour
                 checks[i].localRotation = Quaternion.Euler(-xangle, steerAngle, 0);
                 bool isObjectInFront = Physics.Raycast(checks[i].position, checks[i].forward, out carHit, maxDistance, seenLayers, QueryTriggerInteraction.Ignore);
 
+                //Debug.Log(carHit.collider.gameObject.name);
                 #if UNITY_EDITOR
                 UnityEngine.Debug.DrawRay(checks[i].position, checks[i].forward * maxDistance, Color.green);
                 #endif

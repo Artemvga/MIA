@@ -36,5 +36,10 @@ public class RedConeTrigger : MonoBehaviour
         if (collider.gameObject.name == "RedCone")
                 redIn = false;
     }
+
+    private void Update()
+    {
+        //Debug.Log("Red:" + redIn);
+    }
     
 }

@@ -13,6 +13,8 @@ public class PhotoCamera : MonoBehaviour
     public bool showDebugRay = true;
     public Color validRayColor = Color.green;
     public Color invalidRayColor = Color.red;
+    public AudioSource audioSource;
+    public AudioClip photoSound;
 
     // Переменные для хранения состояния фотографий
     private bool[] correctPhotos = new bool[4]; // 0: 0->180, 1: 180->0, 2: 90->270, 3: 270->90
@@ -59,7 +61,7 @@ public class PhotoCamera : MonoBehaviour
         UpdateRayVisualization();
 
         // Проверяем нажатие кнопки только если в зоне StayTrigger
-        if (lineRenderer.startColor == validRayColor && action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded)
+        if (action.GetStateDown(SteamVR_Input_Sources.Any) && isHanded)
         {
             TryTakePhoto();
         }
@@ -146,34 +148,51 @@ public class PhotoCamera : MonoBehaviour
 
     void TryTakePhoto()
     {
-        List<string> triggerSequence = GetCameraTriggerSequence();
-
-        if (CheckPhotoValidity(triggerSequence))
+        if (lineRenderer.startColor == validRayColor)
         {
-            int photoIndex = GetPhotoIndex(triggerSequence);
+            List<string> triggerSequence = GetCameraTriggerSequence();
 
-            if (photoIndex != -1 && !correctPhotos[photoIndex])
+            if (CheckPhotoValidity(triggerSequence))
             {
-                correctPhotos[photoIndex] = true;
+                int photoIndex = GetPhotoIndex(triggerSequence);
 
-                // Визуальная обратная связь об успешном фото
-                StartCoroutine(ShowPhotoSuccess());
+                if (photoIndex != -1 && !correctPhotos[photoIndex])
+                {
+                    correctPhotos[photoIndex] = true;
 
-                Debug.Log($"<color=green><b>✅ ФОТО УСПЕШНО!</b></color>");
-                Debug.Log($"<color=green>Фото #{photoIndex + 1} сделано! (Триггеры: {string.Join(" -> ", triggerSequence)})</color>");
+                    // Визуальная обратная связь об успешном фото
+                    StartCoroutine(ShowPhotoSuccess());
 
-                // Проверяем, все ли фото сделаны
-                CheckAllPhotosCompleted();
+                    Debug.Log($"<color=green><b>✅ ФОТО УСПЕШНО!</b></color>");
+                    Debug.Log($"<color=green>Фото #{photoIndex + 1} сделано! (Триггеры: {string.Join(" -> ", triggerSequence)})</color>");
+
+                    // Проверяем, все ли фото сделаны
+                    CheckAllPhotosCompleted();
+                }
+                else if (photoIndex != -1)
+                {
+                    Base.instance.PlayPoliceAudio("Camera");
+                    Debug.Log($"<color=yellow>⚠️ Фото #{photoIndex + 1} уже было сделано ранее!</color>");
+                }
+                else
+                {
+                    Base.instance.PlayPoliceAudio("Camera");
+                }
             }
-            else if (photoIndex != -1)
+            else
             {
-                Debug.Log($"<color=yellow>⚠️ Фото #{photoIndex + 1} уже было сделано ранее!</color>");
+                //
+                //
+                Base.instance.PlayPoliceAudio("Camera");
+                //
+                //
+                Debug.Log($"<color=red>❌ Не удалось сделать фото: неправильная последовательность триггеров</color>");
+                Debug.Log($"<color=red>Текущая последовательность: {string.Join(" -> ", triggerSequence)}</color>");
             }
         }
         else
         {
-            Debug.Log($"<color=red>❌ Не удалось сделать фото: неправильная последовательность триггеров</color>");
-            Debug.Log($"<color=red>Текущая последовательность: {string.Join(" -> ", triggerSequence)}</color>");
+            Base.instance.PlayPoliceAudio("Camera");
         }
     }
 
@@ -183,16 +202,15 @@ public class PhotoCamera : MonoBehaviour
         if (lineRenderer)
         {
             Color originalColor = lineRenderer.startColor;
-            lineRenderer.startColor = Color.yellow;
-            lineRenderer.endColor = Color.yellow;
-
+            //lineRenderer.startColor = Color.yellow;
+            //lineRenderer.endColor = Color.yellow;
+            audioSource.PlayOneShot(photoSound);
             yield return new WaitForSeconds(0.3f);
-
-            if (lineRenderer)
+            /*if (lineRenderer)
             {
                 lineRenderer.startColor = validRayColor;
                 lineRenderer.endColor = validRayColor;
-            }
+            }*/
         }
     }
 
@@ -232,7 +250,7 @@ public class PhotoCamera : MonoBehaviour
             }
         }
         
-        if (bad <= 1)
+        if (bad <= 0)
         {
             Debug.Log("<color=green><b>🎉 ВСЕ 4 ФОТОГРАФИИ УСПЕШНО СДЕЛАНЫ!</b></color>");
             if (Base.instance != null)
