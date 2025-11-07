@@ -98,23 +98,15 @@ public class CarAIController : MonoBehaviour
 
         if (deleteCar)
         {
-            for(int i = 0; i < 10; i++)
+            yield return new WaitForSeconds(0.5f);
+            if (isCarFlipedOver())
             {
-                if(!isCarFlipedOver())
-                {
-                    deleteCar = false;
-                }
-                yield return new WaitForSeconds(1);
-            }
-
-            if(deleteCar)
-            {
-                UnityEngine.Debug.Log("Car " + gameObject.name + " destroyed for flipping over.");
+                Debug.Log("Car " + gameObject.name + " destroyed for flipping over.");
                 Destroy(gameObject);
             }
         }
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(3);
 
         flipOverCheck = false;
 
@@ -123,9 +115,11 @@ public class CarAIController : MonoBehaviour
 
     private bool isCarFlipedOver()
     {
-
-        if(transform.rotation.eulerAngles.z > 30f || transform.rotation.eulerAngles.z < -30f)
+        if(transform.rotation.eulerAngles.z > 45f && transform.rotation.eulerAngles.z < 315f)
         {
+            Debug.Log(transform.rotation.eulerAngles.z);
+            Debug.Log(transform.rotation.eulerAngles.z > 45f);
+            Debug.Log(transform.rotation.eulerAngles.z < 315f);
             return true;
         }
 
@@ -231,7 +225,8 @@ public class CarAIController : MonoBehaviour
 
     private void SearchForCheckpoints()
     {
-        if (CheckPointSearch && isCarControlledByAI)
+        if (CheckPointSearch && isCarControlledByAI && 
+            transform.InverseTransformPoint(nextCheckpoint.position).magnitude != 0)
         {
             Vector3 nextCheckpointRelative = transform.InverseTransformPoint(nextCheckpoint.position);
 

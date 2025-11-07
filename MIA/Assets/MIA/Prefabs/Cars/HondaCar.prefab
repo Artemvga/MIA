@@ -4827,7 +4827,7 @@ MonoBehaviour:
   speedLimit: 15
   distanceFromObjects: 2
   recklessnessThreshold: 0
-  despawnForFlippingOver: 0
+  despawnForFlippingOver: 1
   taxiMode: 0
   acceleration: 5000
   breaking: 100000
