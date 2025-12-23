@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.mia.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\GitHub\\MIA\\MIA\\MIA\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\бЭлка\\Documents\\GitHub\\MIA\\MIA\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "MIA [Testing]"

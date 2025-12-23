@@ -21,7 +21,7 @@ public class Roulette : MonoBehaviour
 
         foreach (var el in SteamVR_Input.actionsBoolean)
         {
-            if (el.GetShortName() == "TryTakePhoto")
+            if (el.GetShortName() == "InteractUI" || el.GetShortName() == "TryTakePhoto")
             {
                 action = el;
                 break;

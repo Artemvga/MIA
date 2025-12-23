@@ -15,7 +15,7 @@ public class TabletCanvas : MonoBehaviour
         canvas.removeText.AddListener(removeText);
         foreach (var el in SteamVR_Input.actionsBoolean)
         {
-            if (el.GetShortName() == "TryTakePhoto")
+            if (el.GetShortName() == "InteractUI" || el.GetShortName() == "TryTakePhoto")
             {
                 action = el;
                 break;
@@ -51,6 +51,6 @@ public class TabletCanvas : MonoBehaviour
     }
     private void PlaceText()
     {
-        distanceText.text = "Дистанция: " + roulette.DistanceBetweenPoints.ToString();
+        distanceText.text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + roulette.DistanceBetweenPoints.ToString();
     }
 }
