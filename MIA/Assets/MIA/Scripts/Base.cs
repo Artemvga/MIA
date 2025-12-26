@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using CarAI.Scripts.Constants;
 using TMPro;
 using UnityEngine;
 
@@ -30,7 +29,6 @@ public class Base : MonoBehaviour
             instance = this;
         
         _allClips.Add("Camera", somethingWrongClips[0]);
-        soundsManager.PlaySound(SoundsConstances.BACKGROUND_SOUND);
     }
 
     public void Radio()

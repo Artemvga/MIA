@@ -5,35 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faa493f6-ecc7-4e92-99b0-94463e7b11cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Camera.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Camera.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/doc.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CarAI/doc.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Models/road/Materials/SidewalkAndCurb_BaseColor.1001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Models/road/Materials/SidewalkAndCurb_BaseColor.1001.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Models/road/SidewalkAndCurb_BaseColor.1001.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Models/road/SidewalkAndCurb_BaseColor.1001.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/Car.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/Car.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Scripts/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Scripts/Roulette.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Textures/CameraRenderTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Textures/CameraRenderTexture.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MIA/Textures/MapText.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MIA/Textures/MapText.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Editor/CarAIScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Editor/CarAIScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Editor/FastCheckpointSpawnerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Editor/FastCheckpointSpawnerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CarAI/Scripts/CheckpointScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/TaxiScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/Scripts/TaxiScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/TaxiScriptRunner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CarAI/TaxiScriptRunner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/CarterCar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/CarterCar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/HondaCar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/HondaCar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/TozoCar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MIA/Prefabs/Cars/TozoCar.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenVRSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unityProject.vrmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/unityProject.vrmanifest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Map",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Map&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../../../../Builds/MIA/3\MIA.exe" />

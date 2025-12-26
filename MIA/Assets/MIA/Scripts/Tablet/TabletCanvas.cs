@@ -51,6 +51,6 @@ public class TabletCanvas : MonoBehaviour
     }
     private void PlaceText()
     {
-        distanceText.text = "���������: " + roulette.DistanceBetweenPoints.ToString();
+        distanceText.text = "Расстояние: " + roulette.DistanceBetweenPoints.ToString();
     }
 }
